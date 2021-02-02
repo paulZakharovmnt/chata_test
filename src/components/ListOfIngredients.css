@@ -1,0 +1,87 @@
+.ingredient-selector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+}
+
+.ingredient-btn {
+  list-style: none;
+  width: 20%;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+}
+
+.ingredient-btn:hover {
+  background-color: rgba(0, 0, 0, 0.315);
+}
+
+.ingredient-btn.opened {
+  background-color: white;
+  color: black;
+}
+.drinks {
+  background-color: white;
+}
+
+.list-of-drinks-container {
+  padding: 0px 20px 20px 20px;
+}
+
+.input-search {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-search > input {
+  font-size: 24px;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.list-of-drinks {
+  height: 580px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  background-color: #282c3427;
+}
+
+.drink-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 30%;
+  height: 60px;
+  margin-left: 10px;
+  margin-top: 10px;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.drink-box:hover {
+  background-color: rgba(128, 128, 128, 0.473);
+}
+
+.drink-box > p {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.drink-box > img {
+  width: 50px;
+}

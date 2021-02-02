@@ -4,10 +4,13 @@ import fetchCocktailById from "./core/fetchCocktailById";
 import fetchListOfCocktails from "./core/fetchListOfCocktails";
 import ListOfIngredients from "./components/ListOfIngredients";
 import DrinkRecipieModal from "./components/DrinkRecipieModal";
+import ListOfDrinks from "./components/ListOfDrinks";
 
 function App() {
   const [listOfCocktails, setListOfCocktails] = useState(null);
   const [selectedCocktail, setSelectedCocktail] = useState(null);
+
+  const [selectedIngredient, setSelectedIngredient] = useState(null);
   const [showDrinkModal, setShowDrinkModal] = useState(false);
 
   const myIngredients = useMemo(
@@ -38,12 +41,21 @@ function App() {
 
   return (
     <div className="App">
-      <div className="Ingredients-box">
+      <div className="main-box">
         <ListOfIngredients
           myIngredients={myIngredients}
           listOfCocktails={listOfCocktails}
+          selectedIngredient={selectedIngredient}
           getCocktailRecipie={getCocktailRecipie}
+          setSelectedIngredient={setSelectedIngredient}
         />
+        {selectedIngredient && (
+          <ListOfDrinks
+            selectedIngredient={selectedIngredient}
+            listOfCocktails={listOfCocktails}
+            getCocktailRecipie={getCocktailRecipie}
+          />
+        )}
       </div>
 
       {showDrinkModal && (

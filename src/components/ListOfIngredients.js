@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Ingredient from "./Ingredient";
+import ListOfDrinks from "./ListOfDrinks";
 import "./ListOfIngredients.css";
 
 const ListOfIngredients = ({
@@ -28,7 +28,7 @@ const ListOfIngredients = ({
       </ul>
       <div className="drinks">
         {selectedIngredient && (
-          <Ingredient
+          <ListOfDrinks
             selectedIngredient={selectedIngredient}
             listOfCocktails={listOfCocktails}
             getCocktailRecipie={getCocktailRecipie}

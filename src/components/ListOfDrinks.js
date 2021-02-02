@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-const Ingredient = ({
+const ListOfDrinks = ({
   selectedIngredient,
   listOfCocktails,
   getCocktailRecipie,
@@ -42,4 +42,4 @@ const Ingredient = ({
   );
 };
 
-export default Ingredient;
+export default ListOfDrinks;
